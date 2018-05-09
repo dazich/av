@@ -24,3 +24,6 @@
 使用 eslint 进行代码检查
 使用 esformatter 进行代码格式化
 能自动处理 css 样式兼容性问题
+
+### todo
+1. tree shaking
