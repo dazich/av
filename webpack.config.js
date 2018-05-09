@@ -24,6 +24,7 @@ var webpackConfig = {
     entry: common.entry,
     output: {
         filename: 'public/js/[name]-[hash:5].js',
+        // chunkFilename: '[name].bundle.js',
         path: common.dist,
         publicPath: '/'
     },
