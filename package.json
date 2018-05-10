@@ -10,7 +10,8 @@
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "server": "node server.js"
+    "server": "node server.js",
+    "test-server": "anywhere -s -p 8000 -d ./dist"
   },
   "author": "",
   "license": "ISC",

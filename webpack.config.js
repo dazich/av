@@ -17,7 +17,7 @@ const common = {
     dist: path.join( rootPath, 'dist' ),
     indexHtml: path.join( srcPath, 'index.html' ),
     staticDir: path.join( rootPath, 'static' ),
-    entry:{ app: path.join( srcPath, 'index.js' ) }
+    entry:{ index: path.join( srcPath, 'index.js' ) }
 }
 
 var webpackConfig = {
@@ -37,11 +37,17 @@ var webpackConfig = {
         port: 9000,
         hot: true,  // 模块热加载，不刷新页面
     },
+    resolve: {
+        // Allow absolute paths in imports, e.g. import Button from 'components/Button'
+        // Keep in sync with .flowconfig and .eslintrc
+        modules: ['node_modules', 'src'],
+    },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
-            title: 'Dazi'
-        }),
+        // html 插件
+        // new HtmlWebpackPlugin({
+        //     title: 'Dazi'
+        // }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
