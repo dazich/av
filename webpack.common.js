@@ -25,9 +25,16 @@ module.exports = {
         publicPath: '/',    // 如果为./开发环境会异常，但生产环境。。
     },
 
+    resolve: {
+        // Allow absolute paths in imports, e.g. import Button from 'components/Button'
+        // Keep in sync with .flowconfig and .eslintrc
+        modules: ['node_modules', 'src'],
+    },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './index.html',
             title: 'Dazi'
         }),
         new ExtractTextPlugin({
