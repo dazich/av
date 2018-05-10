@@ -43,6 +43,10 @@ var webpackConfig = {
         modules: ['node_modules', 'src'],
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            React: 'react',
+            ReactDOM: 'react-dom',
+        }),
         new CleanWebpackPlugin(['dist']),
         // html 插件
         // new HtmlWebpackPlugin({
