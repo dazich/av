@@ -1,5 +1,9 @@
 'use strict'
 
+/**
+ * 上线时的配置
+ */
+
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const common = require('./webpack.common.js');

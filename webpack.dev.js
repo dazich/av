@@ -1,4 +1,7 @@
 'use strict'
+/**
+ * 开发时的配置
+ */
 
 const path = require('path');
 const webpack = require('webpack');

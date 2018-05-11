@@ -2,7 +2,13 @@
 
 ### 思路
 1 基础配置，用webpack4实现大部分基础打包功能；后续考虑尝试使用parcel。
-2 加入react ssr（这一步可能后面需要细分）
+2 加入react
+3 加入ssr
+    ReactDOM.renderToString
+    <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
+
+
+4 先将server和client分开执行，后续使用js脚本将二者串联起来，可参考react-starter-kit项目
 
 ### 需求准备
 
